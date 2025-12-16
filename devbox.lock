@@ -1,0 +1,63 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "etcd@3.6.6": {
+      "last_modified": "2025-12-03T03:51:48Z",
+      "resolved": "github:NixOS/nixpkgs/cadcc8de247676e4751c9d4a935acb2c0b059113#etcd",
+      "source": "devbox-search",
+      "version": "3.6.6",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/x30gai5yyj948xq7ahx3ax7zwm2slaws-etcd-3.6.6",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/x30gai5yyj948xq7ahx3ax7zwm2slaws-etcd-3.6.6"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/3qbjx0206m1can0zy6i9nhrwycd4v169-etcd-3.6.6",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/3qbjx0206m1can0zy6i9nhrwycd4v169-etcd-3.6.6"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/rynwpvxjl0xw17mj1g7fdrgjpg4xarnr-etcd-3.6.6",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/rynwpvxjl0xw17mj1g7fdrgjpg4xarnr-etcd-3.6.6"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/qq37jgiqqm70qqfg9hnw3p0dhggfv8ns-etcd-3.6.6",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/qq37jgiqqm70qqfg9hnw3p0dhggfv8ns-etcd-3.6.6"
+        }
+      }
+    },
+    "etcdctl@3.3.27": {
+      "last_modified": "2022-02-15T04:21:50Z",
+      "resolved": "github:NixOS/nixpkgs/3a641defd170a4ef25ce8c7c64cb13f91f867fca#etcdctl",
+      "source": "devbox-search",
+      "version": "3.3.27"
+    },
+    "github:NixOS/nixpkgs/nixpkgs-unstable": {
+      "last_modified": "2025-11-20T06:07:48Z",
+      "resolved": "github:NixOS/nixpkgs/a8d610af3f1a5fb71e23e08434d8d61a466fc942?lastModified=1763618868&narHash=sha256-v5afmLjn%2FuyD9EQuPBn7nZuaZVV9r%2BJerayK%2F4wvdWA%3D"
+    }
+  }
+}
