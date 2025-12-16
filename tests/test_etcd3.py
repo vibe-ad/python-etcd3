@@ -36,9 +36,7 @@ import etcd3.exceptions
 import etcd3.utils as utils
 from etcd3.client import EtcdTokenCallCredentials
 
-etcd_version = os.environ.get('TEST_ETCD_VERSION', 'v3.2.8')
-
-os.environ['ETCDCTL_API'] = '3'
+etcd_version = os.environ.get('TEST_ETCD_VERSION', 'v3.6.6')
 
 if six.PY2:
     int_types = (int, long)
@@ -56,6 +54,15 @@ def etcdctl(*args):
     if endpoint:
         args = ['--endpoints', endpoint] + list(args)
     args = ['etcdctl', '-w', 'json'] + list(args)
+    print(" ".join(args))
+    output = subprocess.check_output(args)
+    return json.loads(output.decode('utf-8'))
+
+def etcdutl(*args):
+    endpoint = os.environ.get('PYTHON_ETCD_HTTP_URL')
+    if endpoint:
+        args = ['--endpoints', endpoint] + list(args)
+    args = ['etcdutl', '-w', 'json'] + list(args)
     print(" ".join(args))
     output = subprocess.check_output(args)
     return json.loads(output.decode('utf-8'))
@@ -1066,7 +1073,7 @@ class TestEtcd3(object):
             etcd.snapshot(f)
             f.flush()
 
-            etcdctl('snapshot', 'status', f.name)
+            etcdutl('snapshot', 'status', f.name)
 
 
 class TestAlarms(object):
